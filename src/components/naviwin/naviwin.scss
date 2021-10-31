@@ -1,0 +1,132 @@
+.naviwin {
+    width: 20.7%;
+    height: 77%;
+    left: 2.9%;
+    top: 12%;
+    background-color: black;
+    position: fixed;
+    overflow: visible;
+
+    // Navi banner
+    .naviban {
+        font-family: jackey;
+        color: #000000;
+        margin: auto;
+        padding: 0px;
+        text-align: center;
+        border-radius: 3px;
+        position: relative;
+        font-size: 4rem;
+        text-shadow: 2px 2px #ff054b;
+        animation: float .90s step-end infinite;
+    }
+
+    .avatar {
+        margin: auto;
+        width: 93%;
+        height: auto;
+        text-align: center;
+        position: relative;
+        background-image: url('../../assets/bsod.jpg');
+        background-size: contain;
+
+        border-style: solid;
+        border-color: white;
+        
+    }
+
+    .bottom-box {
+        margin: auto;
+        margin-top: 1.3rem;
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        padding-top: .625rem;
+        padding-left: .625rem;
+        padding-right: .625rem;
+        font-family: 'Ubuntu Mono', monospace;
+        color: #ff054b;
+	    text-decoration: none;
+        text-align: left;
+        height: 35%;
+
+        //Span
+        span {
+            color: white;
+            font-family: 'Ubuntu Mono', monospace;
+        }
+
+        spanip {
+            color: #ff054b;
+            font-family: 'Ubuntu Mono', monospace;
+        }
+
+        //Borders:
+        border-top: 1px solid #ff054b;
+        border-bottom: 1px solid #ff054b;
+
+        // Scrollbar
+        /* width */
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #8a0021;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #b1002b;
+        }
+    }
+
+    // Navi border shadow
+    -webkit-box-shadow: 7px 1px 15px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 7px 1px 15px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 7px 1px 15px 1px rgba(0, 0, 0, 0.75);
+
+}
+
+.nav-buttons {
+    position: relative;
+    font-family: jackey;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: #ff054b;
+    text-decoration: none;
+    padding-top: 1rem;
+    font-size: 3.3rem;
+}
+
+
+
+@keyframes float {
+	from,
+	to {
+	bottom: 24px;
+	}
+	50% {
+	bottom: 28px;
+	transform: rotate(1deg);
+	}
+}
+
+@keyframes blink {
+	from,
+	to {
+	border-color: transparent;
+	}
+	50% {
+	border-color: #FFFFFF;
+	}
+}
+
+@font-face {
+    font-family: jackey;
+    src: url(../../assets/jackeyfont.ttf);
+}

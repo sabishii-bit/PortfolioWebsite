@@ -1,0 +1,115 @@
+@import "../../global.scss";
+
+// Constants
+$textPosLeft: 2%;       // Used for calculating logo alignment
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: $mainBgColor;
+    color: $mainFontColor;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    .wrapper {
+        // Top/Bot, Left/Right
+        padding: 0.5% 0.4%;
+        // Create flexbox
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .center {
+            align-items: center;
+            position: relative;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            
+                
+            .itemContainer{
+                margin: 6.4px;
+                
+                .icon {
+
+                text-decoration: none;
+                color: #5dea62;
+                font-family: 'Orbitron', sans-serif;
+                font-size: 1.5rem;
+                top: 30%;
+                left: $textPosLeft;
+                animation: 120ms infinite normal glitch;
+
+                @keyframes glitch {
+                    0% {
+                    opacity: 0;
+                    left: $textPosLeft;
+                    }
+                    40% {
+                    opacity: 1;
+                    left: calc(#{$textPosLeft} - 2px); 
+                    }
+                    80% {
+                    opacity: 1;
+                    left: calc(#{$textPosLeft} - 2px);
+                    }
+                }
+                }
+            }
+        }
+    
+
+        // Animation code
+        .left {
+            width: 18%;
+
+            .logo {
+                text-decoration: none;
+                color: #5dea62;
+                font-family: Monaco, monospace;
+                font-size: 1.5rem;
+                position: relative;
+                top: 30%;
+                left: $textPosLeft;
+                animation: 120ms infinite normal glitch;
+            }
+
+            span {
+                animation: 1000ms infinite normal cursor;
+            }
+
+            @keyframes glitch {
+                0% {
+                opacity: 0;
+                left: $textPosLeft;
+                }
+                40% {
+                opacity: 1;
+                left: calc(#{$textPosLeft} - 2px); 
+                }
+                80% {
+                opacity: 1;
+                left: calc(#{$textPosLeft} - 2px);
+                }
+            }
+
+            @keyframes cursor {
+                0% {
+                opacity: 0;
+                left: 0px;
+                }
+                40% {
+                opacity: 0;
+                left: -2px;
+                }
+                80% {
+                opacity: 1;
+                left: -2px;
+                }
+            }
+        }
+    }
+}

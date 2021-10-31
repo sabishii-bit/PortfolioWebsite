@@ -1,0 +1,61 @@
+.mystack {
+    width: 40%;
+    height: 45%;
+    left: 37%;
+    top: 15%;
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(197, 195, 195);
+    position: relative;
+    overflow: visible;
+    
+
+    // Border Shadow
+    -webkit-box-shadow: 7px 1px 15px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 7px 1px 15px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 7px 1px 15px 1px rgba(0, 0, 0, 0.75);
+
+    // Banner
+    .banner {
+        font-family: jackey;
+        color: #000000;
+        margin: auto;
+        padding: 0px;
+        text-align: center;
+        border-radius: 3px;
+        position: relative;
+        font-size: 4rem;
+        text-shadow: 2px 2px #ff054b;
+        animation: float .90s step-end infinite;
+    }
+
+    .skillheader {
+        padding-left: .625rem;
+        color: black;
+        font-family: gamegirl;
+        font-size: 1rem;
+    }
+
+    .icons {
+        padding: 1rem;
+        font-size: 0.5rem;
+        width: 100%;
+        height: 25%;
+        object-fit: contain;
+        scrollbar-width: none; // Get rid of scrollbar (Firefox only)
+        // Get rid of scrollbar for everything else:
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+@font-face {
+    font-family: jackey;
+    src: url(../../../assets/jackeyfont.ttf);
+}
+
+@font-face {
+    font-family: gamegirl;
+    src: url(../../../assets/GamegirlClassic.ttf);
+}
